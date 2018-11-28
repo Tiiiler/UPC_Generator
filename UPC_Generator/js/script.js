@@ -14,7 +14,8 @@ function validateUpc(upc) {
 	// https://sciencing.com/verify-upc-number-6810204.html rules for UPC verification
 	var check = true;
 	if (upc.toString().length != '12') {
-		alert("Invalid UPC length. It should be 12 digits.");	
+		alert("Invalid UPC length. It should be 12 digits.");
+		check = false; // invalid upc
 	} else if (check) {
 		var odd, even, sum, tmp; //vars
 		odd = +upc[0] + +upc[2] + +upc[4] + +upc[6] + +upc[8] + +upc[10]; // add all odd positions of the upc
